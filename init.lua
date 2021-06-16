@@ -31,12 +31,15 @@ if O.extras then
     require('lv-hop')
     require('lv-colorizer')
     require('lv-symbols-outline')
+    require('lv-todo-comments')
+    require('lv-vimwiki')
 end
 
 
 
 -- TODO is there a way to do this without vimscript
 vim.cmd('source '..CONFIG_PATH..'/vimscript/functions.vim')
+
 
 -- LSP
 require('lsp')
