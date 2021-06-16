@@ -49,9 +49,13 @@ return require("packer").startup(function(use)
     require_plugin("plenary.nvim")
     use {"nvim-telescope/telescope.nvim", opt = true}
     require_plugin("telescope.nvim")
+    use "nvim-telescope/telescope-project.nvim"
+    require_plugin("telescope-project.nvim")
     use {"nvim-telescope/telescope-fzy-native.nvim", opt = true}
-    use {"nvim-telescope/telescope-project.nvim", opt = true}
-    require_plugin('telescope-project.nvim')
+
+    -- Terminal Integration
+    use "akinsho/nvim-toggleterm.lua"
+    -- require_plugin('nvim-toggleterm')
 
     -- Debugging
     -- TODO replace with vimspector
@@ -89,6 +93,8 @@ return require("packer").startup(function(use)
     require_plugin("gitsigns.nvim")
     use {'f-person/git-blame.nvim', opt = true}
     require_plugin("git-blame.nvim")
+    use {'kdheepak/lazygit.nvim', opt = true}
+    require_plugin('lazygit.nvim')
 
     -- Comments
     use {"terrortylor/nvim-comment", opt = true}
