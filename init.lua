@@ -33,6 +33,8 @@ if O.extras then
     require('lv-symbols-outline')
     require('lv-vimwiki')
     require('lv-toggleterm')
+    require('lv-imagepaste')
+    require('lv-markdown-preview')
 end
 
 

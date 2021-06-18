@@ -140,7 +140,8 @@ local mappings = {
         M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
         r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
         R = {"<cmd>Telescope registers<cr>", "Registers"},
-        t = {"<cmd>Telescope live_grep<cr>", "Text"}
+        t = {"<cmd>Telescope live_grep<cr>", "Text"},
+        w = {"<cmd>VimwikiSearch<cr>", "wiki"},
     },
     S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}},
 
@@ -150,6 +151,14 @@ local mappings = {
         s = {"<cmd>TZBottom<cr>", "toggle status line"},
         t = {"<cmd>TZTop<cr>", "toggle tab bar"},
         z = {"<cmd>TZAtaraxis<cr>", "toggle zen"},
+    },
+
+    w = {
+        name = "+Wiki",
+        x = {"<cmd> VimwikiIndex<cr>", "to index"},
+        j = {"<cmd> VimwikiDiaryIndex<cr>", "to journal"},
+        t = {"<cmd> VimwikiMakeDiaryNote<cr>", "open today's note"},
+        y = {"<cmd> VimwikiDiaryPrevDay<cr>", "open yesterday's note"},
     }
 }
 

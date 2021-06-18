@@ -5,6 +5,9 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
+vim.api.nvim_set_keymap('', '<C-w>%', ':split', {silent = true})
+vim.api.nvim_set_keymap('', '<C-w>"', ':vsplit', {silent = true})
+
 
 -- TODO fix this
 -- Terminal window navigation

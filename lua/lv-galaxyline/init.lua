@@ -143,6 +143,15 @@ table.insert(gls.right, {
     }
 })
 
+gls.short_line_left[1] = {
+  BufferType = {
+    provider = 'FileTypeName',
+    separator = ' ',
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.blue,colors.bg,'bold'}
+  }
+}
+
 table.insert(gls.right, {
     LineInfo = {
         provider = 'LineColumn',

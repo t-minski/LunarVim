@@ -55,7 +55,8 @@ return require("packer").startup(function(use)
 
     -- Terminal Integration
     use "akinsho/nvim-toggleterm.lua"
-    -- require_plugin('nvim-toggleterm')
+    use {'RishabhRD/popfix'}
+    use {'RishabhRD/nvim-cheat.sh'}
 
     -- Debugging
     -- TODO replace with vimspector
@@ -135,14 +136,13 @@ return require("packer").startup(function(use)
         require_plugin('codi.vim')
         use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install', opt = true}
         require_plugin('markdown-preview.nvim')
-        use {'numToStr/FTerm.nvim', opt = true}
-        require_plugin('numToStr/FTerm.nvim')
         use {'monaqa/dial.nvim', opt = true}
         require_plugin('dial.nvim')
         use {'nacro90/numb.nvim', opt = true}
         require_plugin('numb.nvim')
-        use {'turbio/bracey.vim', run = 'npm install --prefix server', opt = true}
-        require_plugin('bracey.vim')
+        -- live html, css, and javascript editing might be useful one day
+        -- use {'turbio/bracey.vim', run = 'npm install --prefix server', opt = true}
+        -- require_plugin('bracey.vim')
         use {'phaazon/hop.nvim', opt = true}
         require_plugin('hop.nvim')
         use {'norcalli/nvim-colorizer.lua', opt = true}
@@ -154,6 +154,7 @@ return require("packer").startup(function(use)
         use {'nvim-treesitter/playground', opt = true}
         require_plugin('playground')
         use 'vimwiki/vimwiki'
+        use 'ferrine/md-img-paste.vim'
 
         -- folke/todo-comments.nvim
         -- gennaro-tedesco/nvim-jqx
