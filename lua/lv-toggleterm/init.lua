@@ -64,3 +64,28 @@ local lazygit = Terminal:new({
 function _lazygit_toggle()
   lazygit:toggle()
 end
+
+local spotify = Terminal:new({
+  cmd = "spotifyd && spt",
+  direction = "float",
+  float_opts = {
+    border = "curved",
+  },
+
+  -- function to run on opening the terminal
+  on_open = function(term)
+    vim.cmd("startinsert!")
+    vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>bdelete!<CR>", {noremap = true, silent = true})
+  end,
+
+  -- function to run on closing the terminal
+  on_close = function(term)
+    vim.cmd(":bdelete!")
+  end,
+  close_on_exit = true,
+  hidden = true,
+})
+
+function _spotify_toggle()
+  spotify:toggle()
+end

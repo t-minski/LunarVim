@@ -179,11 +179,16 @@ local mappings = {
         y = {"<cmd> VimwikiDiaryPrevDay<cr>", "open yesterday's note"},
     },
 
-    t = {
+    T = {
         name = "+To Do",
         q = {"<cmd> TodoQuickFix<cr>", "quick fix"},
         s = {"<cmd> TodoTelescope<cr>", "telescope"},
         t = {"<cmd> TodoTrouble<cr>", "trouble"},
+    },
+
+    t = {
+        name = "+Terminal",
+        s = {"<cmd>lua _spotify_toggle()<cr>", "spt"}
     }
 }
 
