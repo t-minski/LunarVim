@@ -60,8 +60,11 @@ return require("packer").startup(function(use)
 
     -- Debugging
     -- TODO replace with vimspector
+    use 'puremourning/vimspector'
     use {"mfussenegger/nvim-dap", opt = true}
     require_plugin("nvim-dap")
+    use 'szw/vim-maximizer'
+    use 'cjrh/vim-conda'
 
     -- Autocomplete
     use {"hrsh7th/nvim-compe", opt = true}
@@ -128,6 +131,12 @@ return require("packer").startup(function(use)
     require_plugin("dashboard-nvim")
     use {"kevinhwang91/nvim-bqf", opt = true}
     require_plugin("nvim-bqf")
+    use 'folke/todo-comments.nvim'
+    require_plugin('todo-comments')
+    use 'tpope/vim-surround'
+    use 'unblevable/quick-scope'
+    use 'wojtekmach/vim-rename'
+
 
 
     -- Extras
@@ -156,11 +165,9 @@ return require("packer").startup(function(use)
         use 'vimwiki/vimwiki'
         use 'ferrine/md-img-paste.vim'
 
-        -- folke/todo-comments.nvim
         -- gennaro-tedesco/nvim-jqx
         -- TimUntersberger/neogit
         -- folke/lsp-colors.nvim
-        -- simrat39/symbols-outline.nvim
 
         -- Git
         -- TODO include lazygit

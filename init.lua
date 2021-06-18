@@ -23,6 +23,9 @@ require('lv-rnvimr')
 require('lv-which-key')
 require('lv-lsp-rooter')
 require('lv-zen')
+require('lv-todo-comments')
+require('lv-quickscope')
+require('lv-vimspector')
 
 -- extras
 if O.extras then

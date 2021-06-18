@@ -69,6 +69,9 @@ vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, s
 -- open projects
 vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>",
                         {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap("n", "<leader>r", ":Rename<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>m", ":MaximizerToggle!<CR>", {noremap = true, silent = true})
 -- TODO create entire treesitter section
 
 local mappings = {
@@ -78,6 +81,8 @@ local mappings = {
     ["f"] = "Find File",
     ["h"] = "No Highlight",
     ["p"] = "Projects",
+    ["r"] = "Rename",
+    ["m"] = "Maximize",
     d = {
         name = "+Diagnostics",
         t = {"<cmd>TroubleToggle<cr>", "trouble"},
@@ -89,12 +94,25 @@ local mappings = {
     },
     D = {
         name = "+Debug",
-        b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
-        c = {"<cmd>DebugContinue<cr>", "Continue"},
-        i = {"<cmd>DebugStepInto<cr>", "Step Into"},
-        o = {"<cmd>DebugStepOver<cr>", "Step Over"},
-        r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
-        s = {"<cmd>DebugStart<cr>", "Start"}
+        d = {"<cmd>call vimspector#Launch()<cr>", "Launch"},
+        c = {"<cmd>call GotoWindow(g:vimspector_session_windows.code)<cr>", "Code"},
+        t = {"<cmd>call GotoWindow(g:vimspector_session_windows.tagpage)<cr>", "Tagpage"},
+        v = {"<cmd>call GotoWindow(g:vimspector_session_windows.variables)<cr>", "Variables"},
+        w = {"<cmd>call GotoWindow(g:vimspector_session_windows.watches)<cr>", "Watches"},
+        s = {"<cmd>call GotoWindow(g:vimspector_session_windows.stack_trace)<cr>", "Stack Trace"},
+        o = {"<cmd>call GotoWindow(g:vimspector_session_windows.output)<cr>", "Output"},
+        r = {"<cmd>call vimspector#Reset()<cr>", "Reset"},
+        e = {"<cmd>VimspectorEval<cr>", "Eval"},
+
+        b = {"<cmd>VimspectorToggleBreakpoint<cr>", "Toggle Breakpoint"},
+        p = {"<cmd>call vimspector#Continue()<cr>", "Proceed"},
+        l = {"<cmd>VimspectorStepInto<cr>", "Step Into"},
+        j = {"<cmd>VimspectorStepOver<cr>", "Step Over"},
+        k = {"<cmd>VimspectorStepOut<cr>", "Step Out"},
+        R = {"<cmd>VimspectorRestart<cr>", "Restart"},
+        C = {"<cmd>VimspectorRunToCursor<cr>", "Run to Cursor"},
+        -- r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
+        -- s = {"<cmd>DebugStart<cr>", "Start"}
     },
     g = {
         name = "+Git",
@@ -159,6 +177,13 @@ local mappings = {
         j = {"<cmd> VimwikiDiaryIndex<cr>", "to journal"},
         t = {"<cmd> VimwikiMakeDiaryNote<cr>", "open today's note"},
         y = {"<cmd> VimwikiDiaryPrevDay<cr>", "open yesterday's note"},
+    },
+
+    t = {
+        name = "+To Do",
+        q = {"<cmd> TodoQuickFix<cr>", "quick fix"},
+        s = {"<cmd> TodoTelescope<cr>", "telescope"},
+        t = {"<cmd> TodoTrouble<cr>", "trouble"},
     }
 }
 

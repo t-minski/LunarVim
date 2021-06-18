@@ -5,8 +5,8 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
-vim.api.nvim_set_keymap('', '<C-w>%', ':split', {silent = true})
-vim.api.nvim_set_keymap('', '<C-w>"', ':vsplit', {silent = true})
+vim.api.nvim_set_keymap('', '<C-w>%', ':split<cr>', {silent = true})
+vim.api.nvim_set_keymap('', '<C-w>"', ':vsplit<cr>', {silent = true})
 
 
 -- TODO fix this
@@ -23,6 +23,10 @@ vim.cmd([[
   tnoremap <Esc> <C-\><C-n>
 ]])
 
+-- Save and quit
+vim.api.nvim_set_keymap('n', '<C-S>', ':w <CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-q>', ':q <CR>', {silent = true})
+
 -- TODO fix this
 -- resize with arrows
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize -2<CR>', {silent = true})
@@ -38,6 +42,7 @@ vim.api.nvim_set_keymap('v', '>', '>gv', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('', '<C-c>', '<ESC>', {noremap = true, silent = true})
 
 -- Tab switch buffer
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
