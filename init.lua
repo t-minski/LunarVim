@@ -38,6 +38,13 @@ if O.extras then
     require('lv-toggleterm')
     require('lv-imagepaste')
     require('lv-markdown-preview')
+    -- require('lv-neuron')
+    require('lv-sniprun')
+    require('lv-neoscroll')
+    require('lv-highlight')
+    require('lv-iswap')
+    require('lv-neogit')
+    require('lv-neorg')
 end
 
 

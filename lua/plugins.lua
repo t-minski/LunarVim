@@ -11,8 +11,7 @@ end
 --- Check if a file or directory exists in this path
 local function require_plugin(plugin)
     local plugin_prefix = fn.stdpath("data") .. "/site/pack/packer/opt/"
-
-    local plugin_path = plugin_prefix .. plugin .. "/"
+local plugin_path = plugin_prefix .. plugin .. "/"
     --	print('test '..plugin_path)
     local ok, err, code = os.rename(plugin_path, plugin_path)
     if not ok then
@@ -64,7 +63,6 @@ return require("packer").startup(function(use)
     use {"mfussenegger/nvim-dap", opt = true}
     require_plugin("nvim-dap")
     use 'szw/vim-maximizer'
-    use 'cjrh/vim-conda'
 
     -- Autocomplete
     use {"hrsh7th/nvim-compe", opt = true}
@@ -162,9 +160,25 @@ return require("packer").startup(function(use)
         require_plugin('symbols-outline.nvim')
         use {'nvim-treesitter/playground', opt = true}
         require_plugin('playground')
+
+        -- Note Taking
+
+        use "oberblastmeister/neuron.nvim"
         use 'vimwiki/vimwiki'
         use 'ferrine/md-img-paste.vim'
+        use 'jbyuki/nabla.nvim'
+        use 'tjdevries/train.nvim'
+        use {'michaelb/sniprun', run = 'bash install.sh'}
+        use 'karb94/neoscroll.nvim'
+        use "Pocco81/HighStr.nvim"
+        use 'mizlan/iswap.nvim'
+        use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
+        use 'junegunn/fzf.vim'
+        use 'fiatjaf/neuron.vim'
+
+        use { 'vhyrro/neorg', requires = { 'nvim-lua/plenary.nvim' }}
+        require_plugin('neorg')
         -- gennaro-tedesco/nvim-jqx
         -- TimUntersberger/neogit
         -- folke/lsp-colors.nvim
