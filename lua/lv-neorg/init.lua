@@ -1,7 +1,22 @@
 require('neorg').setup {
 		load = {
-			["core.defaults"] = {},	-- Tells neorg to load the module called core.defaults with no extra data
-			["core.norg.concealer"] = {} -- Since this module isn't part of core.defaults, we can include it ourselves, like so
+            ["core.defaults"] = {},	-- Tells neorg to load the module called core.defaults with no extra data
+			["core.norg.concealer"] = {}, -- Since this module isn't part of core.defaults, we can include it ourselves, like so
+			["core.norg.dirman"] = {
+                config = { -- Load a custom configuration
+
+                      -- Define your workspaces here!
+                      workspaces = {
+                          -- You can give it any name and any directory, get creative!
+                          my_workspace = "~/Documents/Zettelkasten",
+                      },
+                       
+                      -- Automatically detect whenever we have entered a subdirectory of a workspace
+                      autodetect = true,
+                      -- Automatically change the directory to the root of the workspace every time 
+                      autochdir = true,
+                  }
+        }, -- Loads the directory manager with no configuration
 		},
 
         hook = function()
@@ -30,7 +45,7 @@ require('neorg').setup {
                     },
                 }, { silent = true, noremap = true })
 
-end)
+        end)
 
         end
 }

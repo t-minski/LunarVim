@@ -44,7 +44,7 @@ if O.extras then
     require('lv-highlight')
     require('lv-iswap')
     require('lv-neogit')
-    require('lv-neorg')
+    require('lv-nabla')
 end
 
 

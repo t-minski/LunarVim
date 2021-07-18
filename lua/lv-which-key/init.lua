@@ -149,7 +149,7 @@ local mappings = {
     },
     s = {
         name = "+Search",
-        b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
+        B = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
         c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
@@ -160,6 +160,7 @@ local mappings = {
         R = {"<cmd>Telescope registers<cr>", "Registers"},
         t = {"<cmd>Telescope live_grep<cr>", "Text"},
         w = {"<cmd>VimwikiSearch<cr>", "wiki"},
+        b = {"<cmd>JABSOpen<cr>", "buffers"},
     },
     S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}},
 
@@ -177,6 +178,9 @@ local mappings = {
         j = {"<cmd> VimwikiDiaryIndex<cr>", "to journal"},
         t = {"<cmd> VimwikiMakeDiaryNote<cr>", "open today's note"},
         y = {"<cmd> VimwikiDiaryPrevDay<cr>", "open yesterday's note"},
+        d = {"<cmd> VimwikiDeleteFile<cr>", "delete file"},
+        n = {"<cmd> VimwikiRenameFile<cr>", "rename file"},
+        g = {"<cmd>lua _glow_toggle()<CR>", "glow"},
     },
 
     T = {
@@ -186,10 +190,14 @@ local mappings = {
         t = {"<cmd> TodoTrouble<cr>", "trouble"},
     },
 
-    t = {
-        name = "+Terminal",
-        s = {"<cmd>lua _spotify_toggle()<cr>", "spt"}
-    }
+    -- t = {
+    --     name = "+TaskWiki",
+    -- },
+
+    -- T = {
+    --     name = "+Toggle",
+    --     s = {"<cmd>lua _spotify_toggle()<cr>", "spt"},
+    -- }
 }
 
 local wk = require("which-key")

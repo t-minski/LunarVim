@@ -117,10 +117,23 @@ return require("packer").startup(function(use)
     require_plugin("galaxyline.nvim")
     use {"romgrk/barbar.nvim", opt = true}
     require_plugin("barbar.nvim")
+    use 'matbme/JABS.nvim'
 
     -- Zen Mode
     use {"Pocco81/TrueZen.nvim", opt = true}
     require_plugin("TrueZen.nvim")
+
+    -- Note Taking
+
+    -- use "oberblastmeister/neuron.nvim"
+    use {'vimwiki/vimwiki', branch = 'dev'}
+    use {'tools-life/taskwiki'}
+    use {'powerman/vim-plugin-AnsiEsc'}
+    use {'preservim/tagbar'}
+    use {'farseer90718/vim-taskwarrior'}
+    use 'ferrine/md-img-paste.vim'
+    use 'jbyuki/nabla.nvim'
+    use {'npxbr/glow.nvim', run = ":GlowInstall"}
 
     -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
     use {"folke/which-key.nvim", opt = true}
@@ -134,6 +147,7 @@ return require("packer").startup(function(use)
     use 'tpope/vim-surround'
     use 'unblevable/quick-scope'
     use 'wojtekmach/vim-rename'
+    use 'mfussenegger/nvim-ts-hint-textobject'
 
 
 
@@ -161,13 +175,6 @@ return require("packer").startup(function(use)
         use {'nvim-treesitter/playground', opt = true}
         require_plugin('playground')
 
-        -- Note Taking
-
-        use "oberblastmeister/neuron.nvim"
-        use 'vimwiki/vimwiki'
-        use 'ferrine/md-img-paste.vim'
-        use 'jbyuki/nabla.nvim'
-        use 'tjdevries/train.nvim'
         use {'michaelb/sniprun', run = 'bash install.sh'}
         use 'karb94/neoscroll.nvim'
         use "Pocco81/HighStr.nvim"
@@ -176,9 +183,8 @@ return require("packer").startup(function(use)
 
         use 'junegunn/fzf.vim'
         use 'fiatjaf/neuron.vim'
+        use 'gyim/vim-boxdraw'
 
-        use { 'vhyrro/neorg', requires = { 'nvim-lua/plenary.nvim' }}
-        require_plugin('neorg')
         -- gennaro-tedesco/nvim-jqx
         -- TimUntersberger/neogit
         -- folke/lsp-colors.nvim

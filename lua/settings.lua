@@ -46,4 +46,5 @@ vim.cmd('set spelllang=en_us,de_20')
 -- vim.cmd([[let spelllang=en_gb, de_20]])
 
 -- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
-vim.g.python3_host_prog = '~/.miniconda3/bin/python3'
+-- vim.g.python3_host_prog = '~/.miniconda3/bin/python3'
+vim.cmd('set autoread') -- treat dash separated words as a word text object"
