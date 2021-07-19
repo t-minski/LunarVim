@@ -167,8 +167,9 @@ local mappings = {
     -- extras
     z = {
         name = "+Zen",
-        s = {"<cmd>TZBottom<cr>", "toggle status line"},
-        t = {"<cmd>TZTop<cr>", "toggle tab bar"},
+        -- s = {"<cmd>TZBottom<cr>", "toggle status line"},
+        -- t = {"<cmd>TZTop<cr>", "toggle tab bar"},
+        s = {"<cmd>lua _spotify_toggle()<cr>", "spt"},
         z = {"<cmd>TZAtaraxis<cr>", "toggle zen"},
     },
 
@@ -190,14 +191,9 @@ local mappings = {
         t = {"<cmd> TodoTrouble<cr>", "trouble"},
     },
 
-    -- t = {
-    --     name = "+TaskWiki",
-    -- },
-
-    -- T = {
-    --     name = "+Toggle",
-    --     s = {"<cmd>lua _spotify_toggle()<cr>", "spt"},
-    -- }
+    t = {
+        name = "+TaskWiki",
+    },
 }
 
 local wk = require("which-key")

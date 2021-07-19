@@ -1,7 +1,7 @@
 vim.g.vimwiki_list = {
     {
         path = '/home/minski/Documents',
-        diary_rel_path = 'Zettelkasten/Journal',
+        diary_rel_path = 'Zettelkasten/References/Journal',
         auto_diary_index = 1,
         diary_header = 'Journal',
         diary_sort = 'desc',
